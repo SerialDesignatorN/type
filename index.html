@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title id="pageTitle">New Document 1 - Kasius Type</title>
+        <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+        <link rel="stylesheet" href="KasiusTypeDark.css" />
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+ 
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <style>
+      body {
+  font-family: Segoe UI;
+  background-color: #232323;
+}
+.contenteditor {
+  background-color: #FFFFFF;
+  font-family: Segoe UI;
+  font-size: 15px;
+  text-decoration-color: #000000;
+}
+h1 {
+    font-family: Segoe UI;
+    font-size: 48px;
+    font-style: bold;
+    color: #FFFFFF
+}
+p {
+  font-family: Segoe UI;
+  color: #000000;
+  font-size: 12px;
+}
+h2 {
+  font-family: Segoe UI;
+  color: #FFFFFF
+  font-size: 18px;
+}
+h3 {
+  font-family: Segoe UI;
+  color: #FFFFFF;
+  font-size: 18px;
+}
+#editor {
+    width: 794px;
+    font-size: 20px;
+    height: 1123px;
+    display: block;
+    border: 2px solid lightblue;
+    margin-top: 4px;
+    margin-left: 270px;
+}
+.header {
+  background-color: #232323;
+  width: 100%;
+  height: 129px;
+  left: 0px;
+}
+.btn {
+  background-color: #232323; /* Blue background */
+  border: none; /* Remove borders */
+  color: #f5f5f5;
+  font-family: Segoe UI; /* White text */
+  padding: 12px 16px; /* Some padding */
+  font-size: 20px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+}
+
+/* The Font Input Picker */
+.fontinput {
+  font-size: 20px;
+  border-radius: 25px;
+  background-color: #232323;
+  color: #f5f5f5;
+  font-family: Segoe UI;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: #363636;
+  border-radius: 30px;
+}
+/* Dropdown Button */
+.dropbtn {
+  background-color: #232323;
+  color: white;
+  font-family: Segoe UI;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #363636;
+  border-radius: 30px;
+}
+.tooltip .tooltiptext {
+  width: 120px;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+.tooltip .tooltiptext {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.tooltip:hover .tooltiptext {
+  opacity: 1;
+}
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;  /* At the top of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+/* Dropdown Button */
+.dropbtn {
+  background-color: #232323;
+  color: #f5f5f5;
+  padding: 16px;
+  font-size: 20px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #363636;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: #f5f5f5;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #545454;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #363636;}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  font-family: Segoe UI;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #FFFFFF;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: gray;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* Modal Header */
+.modal-header {
+  padding: 2px 16px;
+  background-color: #00a2e8;
+  color: white;
+}
+
+/* Modal Body */
+.modal-body {padding: 2px 16px;}
+/* Modal body white text */
+.modal-body p {color: #f2f2f2}
+
+/* Modal Footer */
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #00a2e8;
+  color: white;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #545454;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: udimrev 5s ease 0s normal none;;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@keyframes udimrev {
+    0.0%{
+    }
+    15.0%{
+        transform-origin: top;
+        transform: translate(0px, 200px);
+    }
+    animation-duration: 4s;
+}
+{box-sizing: border-box;}
+
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup chat - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+/* The switch button */
+.switch {
+  background-color: #f2f2f2;
+  color: #0d0d0d;
+  font-size: 12px;
+  border-radius: 16px;
+}
+/* When it hovers, do the thing, badass */
+.switch:hover {
+  background-color: #d9d9d9;
+  color: #0d0d0d;
+  font-size: 16px;
+  border-radius: 18px;
+}
+/* Page content */
+.content {
+  padding: 0px;
+}
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 102px;
+}
+    </style>
+    </head>
+    <body>
+        <div class="header" id="ToolBar">
+           <img width="60" src="icon.png">
+           <input type="text" STYLE="color: #fefefe; font-family: Segoe UI; font-weight: bold; font-size: 48px; background-color: #232323" id="title" placeholder="New Document 1">
+           <button class="btn" id="btnChange" onclick="myFunction()">Change</button> 
+           <div>
+            <div class="dropdown">
+              <button class="dropbtn"><i class="fas fa-bars"></i></button>
+              <div class="dropdown-content">
+                 <a href="#"><i class="fas fa-plus"></i> New</a>
+                 <a href="#"><i class="fas fa-folder-open"></i> Open</a>
+                 <a onclick="window.print()" href="javascript:void(0);"><i class="fas fa-print"></i> Print</a>
+                 <a href="#"><i class="far fa-save"></i> Save</a>
+                 <a href="#"><i class="fas fa-comment-dots"></i> Comments (beta)</a>
+                 <a href="C:\Users\zeanf\Documents\Business360Suite\index.html"><i class="fas fa-times"></i> Quit</a>
+              </div>
+           </div>
+               <button class="btn" id="btnUndo" title="Undo (Ctrl+Z)"><i class="fas fa-undo"></i></button>
+               <button class="btn" id="btnRedo" title="Redo (Ctrl+Y)"><i class="fas fa-redo"></i></button>
+               <button class="btn" onclick="window.print();" title="Print Document (Ctrl+P)"><i class="fas fa-print"></i></button>
+               <button class="btn" id="btnDelete" title="Delete (Del)"><i class="far fa-trash-alt"></i></button>
+               <input type="color" id="colorInput">
+               <button class="btn" id="colorBtn" onclick="color()"><i class="fas fa-paint-roller"></i></button>
+               <select id="fontInput" class="fontinput" onchange="font();">
+                  <option value="Calibri" style="font-family: Calibri;">Calibri</option>
+                  <option value="Arial" style="font-family: Arial;">Arial</option>
+                  <option value="Helvetica" style="font-family: Helvetica;">Helvetica</option>
+                  <option value="Times New Roman" style="font-family: Times New Roman;">Times New Roman</option>
+                  <option value="Sans serif" style="font-family: sans-serif;">Sans serif</option>
+                  <option value="Courier New" style="font-family: Courier New;">Courier New</option>
+                  <option value="Verdana" style="font-family: Verdana;">Verdana</option>
+                  <option value="Georgia" style="font-family: Georgia;">Georgia</option>
+                  <option value="Palatino" style="font-family: Palatino;">Palatino</option>
+                  <option value="Garamond" style="font-family: Garamond;">Garamond</option>
+                  <option value="KONE Information" style="font-family: KONE Information;">KONE Information</option>
+                  <option value="Comic Sans MS" style="font-family: Comic Sans MS;">Comic Sans MS</option>
+                  <option value="Arial Black" style="font-family: Arial Black;">Arial Black</option>
+                  <option value="Tahoma" style="font-family: Tahoma;">Tahoma</option>
+               </select>
+               <input type="text" id="fontsizeInput" class="fontinput" style="width: 33px;" maxlength="3">
+               <button class="btn" id="sizeOK" onclick="size()"><i class="fas fa-check"></i></button>
+               <button class="btn" id="btnBold" title="Bold Format (Ctrl+B)"><i class="fas fa-bold"></i></button> 
+               <button class="btn" id="btnItalic" title="Italic Format (Ctrl+I)"><i class="fas fa-italic"></i></button> 
+               <button class="btn" id="btnUnderline" title="Underline Format (Ctrl+U)"><i class="fas fa-underline"></i></button> 
+               <button class="btn" id="btnStrike" title="Strikethrough"><i class="fas fa-strikethrough"></i></button>
+               <button class="btn" id="btnSuperscript" title="Superscript"><i class="fas fa-superscript"></i></button>
+               <button class="btn" id="btnSubscript" title="Subscript"><i class="fas fa-subscript"></i></button>
+               <button class="btn" id="btnRemoveFormat" title="Clear Format"><i class="fas fa-remove-format"></i></button> 
+               <button class="btn" id="btnCenter" title="Align to Center"><i class="fas fa-align-center"></i></button> 
+               <button class="btn" id="btnRight" title="Align to Right"><i class="fas fa-align-right"></i></button> 
+               <button class="btn" id="btnLeft" title="Align to left (default)"><i class="fas fa-align-left"></i></button>
+               <!-- Trigger/Open The Modal -->
+               <button class="btn" id="myBtn"><i class="fas fa-info-circle"></i></button>
+
+               <!-- The Modal -->
+               <div id="myModal" class="modal">
+
+                  <!-- Modal content -->
+                   <div class="modal-content">
+                      <div class="modal-header">
+                        <span class="close">&times;</span>
+                        <h2>About Kasius Type</h2>
+                      </div>
+                      <div class="modal-body">
+                        <p>Version: Stable 2.1.5</p>
+                        <p style="font-weight: bold;">-----------Credits------------</p>
+                        <p>Lead Developer: Zean F. Isnomo</p>
+                        <p>HTML, CSS and JS coder: Zean F. Isnomo</p>
+                        <p>Favicon designer: Zean F. Isnomo</p>
+                        <p>Ideas: My friends at my same class</p>
+                        <p style="font-weight: bold;">Thanks for everyone who support my project!</p>
+                        <p>Including the support of:</p>
+                        <p>DashdroidSecondHenry</p>
+                        <p>EnoughPlenty</p>
+                        <p>Charles Calvin</p>
+                        <p>arka</p>
+                        <p>AlTheEpicGamer</p>
+                        <p>Avector_A</p>
+                        <p>Coded on:</p>
+                        <div>
+                            <img width="118" src="html5.png">
+                            <img width="80" src="css3.png">
+                            <img width="114" src="javascript.png">
+                        </div>
+                        <p style="font-weight: bold;">---------Help log-----------</p>
+                        <p>Undo: Ctrl+Z (Cmd+Z)</p>
+                        <p>Redo: Ctrl+Y (Cmd+Y)</p>
+                        <p>Print: Ctrl+P (Cmd+P)</p>
+                        <p>Delete: Del</p>
+                        <p>Bold: Ctrl+B (Cmd+B)</p>
+                        <p>Italic: Ctrl+I (Cmd+I)</p>
+                        <p>Underline: Ctrl+U (Cmd+U)</p>
+                        <p style="font-weight: bold;">Other formatting keybinds are not available due to bloat and bugs after alpha testing.</p>
+                        <p style="font-weight: bold;">---------What's on Kasius Type--------</p>
+                        <video width="1000" data-autoplay="" src="Kasius New UI Trailer.mp4" controls="true"></video>
+                        <a class="switch" href="D:\KasiusTypeRev\KasiusTypeWeb.html">Switch to Light Theme</a>
+                      </div>
+                      <div class="modal-footer">
+                        <h3>©2020 Kasius Ltd. All rights reserved.</h3>
+                      </div>
+                    </div>
+                   </div>
+               </div>
+           </div>
+        </div>
+           <div class="contenteditor" id="editor" contenteditable="true" spellcheck="true" >
+           </div>
+        <script>
+          var btnBold = document.getElementById("btnBold");
+var btnItalic = document.getElementById("btnItalic");
+var btnUnderline = document.getElementById("btnUnderline");
+var btnStrike = document.getElementById("btnStrike");
+var btnSubscript = document.getElementById("btnSubscript");
+var btnRemoveFormat = document.getElementById("btnRemoveFormat");
+var btnSuperscript = document.getElementById("btnSuperscript");
+var btnSubscript = document.getElementById("btnSubscript")
+var btnCenter = document.getElementById("btnCenter");
+var btnRight = document.getElementById("btnRight");
+var btnLeft = document.getElementById("btnLeft");
+var btnUndo = document.getElementById("btnUndo");
+var btnRedo = document.getElementById("btnRedo")
+var btnSave = document.getElementById("btnSave")
+var btnDelete = document.getElementById("btnDelete")
+
+btnDelete.addEventListener("mousedown", function(event){
+    document.execCommand("delete");
+    console.log("Delete successful");
+    event.preventDefault();
+});
+btnRedo.addEventListener("mousedown", function(event){
+    document.execCommand("redo");
+    console.log("Redo successful");
+    event.preventDefault();
+});    
+btnUndo.addEventListener("mousedown", function(event){
+    document.execCommand("undo");
+    console.log("Undo successful");
+    event.preventDefault();
+});
+btnLeft.addEventListener("mousedown", function(event){
+    document.execCommand("justifyLeft");
+    console.log("Justify to the left successful");
+    event.preventDefault();
+});
+btnRight.addEventListener("mousedown", function(event){
+    document.execCommand("justifyRight");
+    console.log("Justify to the right successful");
+    event.preventDefault();
+});
+btnCenter.addEventListener('mousedown', function(event){
+    document.execCommand("justifyCenter");
+    console.log("Justify to the center successful");
+    event.preventDefault();
+});
+btnSubscript.addEventListener("mousedown", function(event){
+    document.execCommand("subscript");
+    console.log("Subscript successful");
+    event.preventDefault();
+});
+btnSuperscript.addEventListener("mousedown", function(event){    
+    document.execCommand("superscript");
+        console.log("Superscript successful");
+    event.preventDefault();
+     
+});
+btnRemoveFormat.addEventListener("mousedown", function(event){
+     
+    document.execCommand("removeFormat");
+    console.log("Format remove successful");
+    event.preventDefault();
+          
+});
+btnStrike.addEventListener("mousedown", function(event){
+     
+    document.execCommand("strikethrough");
+    console.log("Strikethrough successful");
+    event.preventDefault();
+     
+});
+btnBold.addEventListener("mousedown", function(event){
+     
+    document.execCommand("bold");
+    console.log("Bold formatted successful");
+    event.preventDefault();
+ 
+});
+btnItalic.addEventListener("mousedown", function(event){
+     
+    document.execCommand("italic");
+    console.log("Italic formatted successful");
+    event.preventDefault();
+     
+});
+btnUnderline.addEventListener("mousedown", function(event){
+     
+    document.execCommand("underline");
+    console.log("Underline formatted successful");
+    event.preventDefault();
+     
+});
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+  console.log("Modal opened");
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+  console.log("Modal closed")
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    console.log("Modal closed anywhere")
+  }
+}
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+function myFunction() {
+    var str1 = document.getElementById("title").value;
+    var str2 = " - Kasius Type";
+    var res = str1.concat(str2);
+    document.getElementById("pageTitle").innerHTML = res;
+}
+
+function color() {
+    console.log("Changed color")
+    let color = document.getElementById("colorInput").value
+    document.getElementById("editor").style.color = document.getElementById("colorInput").value;
+
+}
+
+function font() {
+    console.log("Font changed")
+    let font = document.getElementById("fontInput").value
+    document.getElementById("editor").style.fontFamily = document.getElementById("fontInput").value
+    document.getElementById("fontInput").style.fontFamily = document.getElementById("fontInput").value
+}
+
+function size() {
+    console.log("Font size changed");
+    let fontSize = document.getElementById("fontsizeInput");
+    document.getElementById("editor").style.fontSize = document.getElementById("fontsizeInput").value+"px"
+};
+// Warning before leaving the page (back button, or outgoinglink)
+window.onbeforeunload = function() {
+   return "Do you really want to leave our brilliant application?";
+   //if we return nothing here (just calling return;) then there will be no pop-up question at all
+   //return;
+};
+        </script>
+    </body>
+</html>
