@@ -8,13 +8,15 @@
         <title id="pageTitle">New Document 1 - Kasius Type</title>
         <link rel="stylesheet" href="KasiusTypeDark.css" />
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Chewy&amp;family=Didact+Gothic&amp;family=Fredoka+One&amp;family=Grandstander:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Lato:ital,wght@0,400;0,900;1,400;1,700;1,900&amp;family=M+PLUS+Rounded+1c:wght@400;500;700;800;900&amp;family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,700;1,800;1,900&amp;family=Patrick+Hand&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&amp;family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Schoolbell&amp;display=swap" rel="stylesheet">
  
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <style>
-      body {
+body {
   font-family: Segoe UI;
   background-color: #232323;
+  user-select: none;
 }
 .contenteditor {
   background-color: #FFFFFF;
@@ -51,6 +53,7 @@ h3 {
     border: 2px solid lightblue;
     margin-top: 4px;
     margin-left: 270px;
+    user-select: text;
 }
 .header {
   background-color: #232323;
@@ -64,8 +67,18 @@ h3 {
   color: #f5f5f5;
   font-family: Segoe UI; /* White text */
   padding: 12px 16px; /* Some padding */
+  font-size: 12px; /* Set a font size */
+  cursor: default; /* Mouse pointer on hover */
+}
+
+.btnchange {
+  background-color: #232323; /* Blue background */
+  border: none; /* Remove borders */
+  color: #f5f5f5;
+  font-family: Segoe UI; /* White text */
+  padding: 12px 16px; /* Some padding */
   font-size: 20px; /* Set a font size */
-  cursor: pointer; /* Mouse pointer on hover */
+  cursor: default; /* Mouse pointer on hover */
 }
 
 /* The Font Input Picker */
@@ -88,7 +101,7 @@ h3 {
   color: white;
   font-family: Segoe UI;
   padding: 16px;
-  font-size: 16px;
+  font-size: 10px;
   border: none;
   cursor: pointer;
 }
@@ -127,7 +140,7 @@ h3 {
   background-color: #232323;
   color: #f5f5f5;
   padding: 16px;
-  font-size: 20px;
+  font-size: 12px;
   border: none;
 }
 
@@ -229,7 +242,7 @@ h3 {
   border: 1px solid #888;
   width: 80%;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-  animation-name: udimrev 5s ease 0s normal none;;
+  animation-name: udimrev;
   animation-duration: 0.4s
 }
 
@@ -241,7 +254,6 @@ h3 {
         transform-origin: top;
         transform: translate(0px, 200px);
     }
-    animation-duration: 4s;
 }
 {box-sizing: border-box;}
 
@@ -343,6 +355,92 @@ h3 {
 .sticky + .content {
   padding-top: 102px;
 }
+#menu {
+  display: block;
+  background-color: #232323;
+  padding: 10px 0px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 30px lightgrey;
+  position: absolute;
+  transform-origin: center;
+  z-index: 2;
+  opacity: 0;
+  transform: scale(0);
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+#menu.show {
+  opacity: 1;
+  transform: scale(1);
+  transform-origin: top left;
+}
+
+.menu-item {
+  display: block;
+  padding: 10px 30px;
+  transition: 0.1s;
+  font-size: 20px;
+  color: #f5f5f5;
+}
+
+.menu-item:hover {
+  background-color: #363636;
+  cursor: pointer;
+}
+
+#out-click {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: none;
+}
+}
+.altAccess {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.access {
+  display: none;
+  position: absolute;
+  background-color: #232323;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.access a {
+  color: #f2f2f2;
+  padding: 12px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.access a:hover {background-color: #363636}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display:block;
+}
+
+.accessbtn {
+  background-color: #232323; /* Blue background */
+  border: none; /* Remove borders */
+  color: #f5f5f5;
+  font-family: Segoe UI; /* White text */
+  padding: 12px 16px; /* Some padding */
+  font-size: 20px; /* Set a font size */
+  cursor: default; /* Mouse pointer on hover */
+}
+
+.altAccess:hover .access {display: block;}
     </style>
     </head>
     <body>
@@ -371,11 +469,24 @@ h3 {
                   <option value="Calibri" style="font-family: Calibri;">Calibri</option>
                   <option value="Arial" style="font-family: Arial;">Arial</option>
                   <option value="Helvetica" style="font-family: Helvetica;">Helvetica</option>
+                  <option value="Didact Gothic" style="font-family: Didact Gothic;">Didact Gothic</option>
                   <option value="Times New Roman" style="font-family: Times New Roman;">Times New Roman</option>
+                  <option value="Pixelato" style="font-family: Pixelato">Pixelato</option>
                   <option value="Sans serif" style="font-family: sans-serif;">Sans serif</option>
+                  <option value="Rubik" style="font-family: Rubik;">Rubik</option>
                   <option value="Courier New" style="font-family: Courier New;">Courier New</option>
+                  <option value="Lato" style="font-family: Lato;">Lato</option>
+                  <option value="Roboto" style="font-family: Roboto;">Roboto</option>
+                  <option value="Grandstander" style="font-family: Grandstander;">Grandstander</option>
+                  <option value="Poppins" style="font-family: Poppins;">Poppins</option>
+                  <option value="Nunito" style="font-family: Nunito;">Nunito</option>
+                  <option value="Barlow Condensed" style="font-family: Barlow Condensed;">Barlow Condensed</option>
+                  <option value="Chewy" style="font-family: Chewy">Chewy</option>
+                  <option value="Schoolbell" style="font-family: Schoolbell;">Schoolbell</option>
+                  <option value="Fredoka One" style="font-family: Fredoka One">Fredoka One</option>
                   <option value="Verdana" style="font-family: Verdana;">Verdana</option>
                   <option value="Georgia" style="font-family: Georgia;">Georgia</option>
+                  <option value="Patrick Hand" style="font-family: Patrick Hand">Patrick Hand</option>
                   <option value="Palatino" style="font-family: Palatino;">Palatino</option>
                   <option value="Garamond" style="font-family: Garamond;">Garamond</option>
                   <option value="KONE Information" style="font-family: KONE Information;">KONE Information</option>
@@ -420,9 +531,19 @@ h3 {
            </div>
         </div>
            <div class="contenteditor" id="editor" contenteditable="true" spellcheck="true" >
+           <ul id="menu" class="show" style="top: 282px; left: 676px;">
+             <li class="menu-item" onclick="cut()"><i class="fas fa-cut"></i> Cut</li>
+             <li class="menu-item" id="btnCopy"><i class="fas fa-copy"></i> Copy</li>
+             <li class="menu-item" id="btnPaste"><i class="fas fa-clipboard"></i> Paste</li>
+             <hr style="color: #fff; width: 164px;">
+             <li class="menu-item" id="Bold"><i class="fas fa-bold"></i> Bold</li>
+             <li class="menu-item" id="Italic"><i class="fas fa-italic"></i> Italic</li>
+             <li class="menu-item" id="Underline"><i class="fas fa-underline"></i> Underline</li>
+             <li class="menu-item" id="Strike"><i class="fas fa-strikethrough"></i> Strikethrough</li>
+           </ul>
            </div>
         <script>
-          var btnBold = document.getElementById("btnBold");
+var btnBold = document.getElementById("btnBold");
 var btnItalic = document.getElementById("btnItalic");
 var btnUnderline = document.getElementById("btnUnderline");
 var btnStrike = document.getElementById("btnStrike");
@@ -437,7 +558,53 @@ var btnUndo = document.getElementById("btnUndo");
 var btnRedo = document.getElementById("btnRedo")
 var btnSave = document.getElementById("btnSave")
 var btnDelete = document.getElementById("btnDelete")
+var btnCopy = document.getElementById("btnCopy")
+var btnPaste = document.getElementById("btnPaste")
+var Bold = document.getElementById("Bold");
+var Italic = document.getElementById("Italic");
+var Underline = document.getElementById("Underline");
+var Strike = document.getElementById("Strike");
 
+function cut(){
+    document.execCommand("cut");
+    event.preventDefault()
+}
+btnStrike.addEventListener("mousedown", function(event){
+     
+    document.execCommand("strikethrough");
+    console.log("Strikethrough successful from right click");
+    event.preventDefault();
+     
+});
+Bold.addEventListener("mousedown", function(event){
+     
+    document.execCommand("bold");
+    console.log("Bold formatted successful from right click");
+    event.preventDefault();
+ 
+});
+Italic.addEventListener("mousedown", function(event){
+     
+    document.execCommand("italic");
+    console.log("Italic formatted successful from right click");
+    event.preventDefault();
+     
+});
+Underline.addEventListener("mousedown", function(event){
+     
+    document.execCommand("underline");
+    console.log("Underline formatted successful from right click");
+    event.preventDefault();
+     
+});
+btnCopy.addEventListener("mousedown", function(event){
+    document.execCommand("copy");
+    event.preventDefault()
+})
+btnPaste.addEventListener("mousedown", function(event){
+    document.execCommand("paste");
+    event.preventDefault()
+})
 btnDelete.addEventListener("mousedown", function(event){
     document.execCommand("delete");
     console.log("Delete successful");
@@ -514,34 +681,6 @@ btnUnderline.addEventListener("mousedown", function(event){
     event.preventDefault();
      
 });
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
-  console.log("Modal opened");
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-  console.log("Modal closed")
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-    console.log("Modal closed anywhere")
-  }
-}
 function openForm() {
   document.getElementById("myForm").style.display = "block";
 }
@@ -555,6 +694,7 @@ function myFunction() {
     var str2 = " - Kasius Type";
     var res = str1.concat(str2);
     document.getElementById("pageTitle").innerHTML = res;
+    
 }
 
 function color() {
@@ -582,6 +722,49 @@ window.onbeforeunload = function() {
    //if we return nothing here (just calling return;) then there will be no pop-up question at all
    //return;
 };
+const editor = document.getElementById('editor')
+  const menu = document.getElementById('menu')
+  const outClick = document.getElementById('out-click')
+
+  editor.addEventListener('contextmenu', e => {
+    e.preventDefault()
+
+    menu.style.top = `${e.clientY}px`
+    menu.style.left = `${e.clientX}px`
+    menu.classList.add('show')
+
+    outClick.style.display = "block"
+  })
+
+  outClick.addEventListener('click', () => {
+    menu.classList.remove('show')
+    outClick.style.display = "none"
+  })
+  function speichern() {
+    var str1 = document.getElementById("title").value;
+    var str2 = " - Kasius Type";
+    var res = str1.concat(str2);
+    doc.save(document.getElementById("pageTitle").innerHTML = res + ".pdf");
+  }
+  /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function showAccess() {
+  document.getElementById("allAccess").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.accessbtn')) {
+    var dropdowns = document.getElementsByClassName("access");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
         </script>
     </body>
 </html>
