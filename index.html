@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title id="pageTitle">Neues Dokument 1- Kasius Type</title>
+        <title id="pageTitle">New Document 1 - Kasius Type</title>
         <link rel="icon" href="https://github.com/zeankundev/kasius-type-git-revised/blob/main/icon.png?raw=true" type="image/x-icon"/>
         <link rel="stylesheet" href="style.css"/>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -22,27 +22,27 @@
     <body>
         <div class="header" id="ToolBar">
            <img width="40" src="https://github.com/zeankundev/kasius-type-git-revised/blob/main/icon.png?raw=true" style="margin-bottom: -12px;">
-           <input type="text" id="title" placeholder="Neues Dokument 1" onchange="myFunction()">
-           <button class="btnchange" style="font-weight: bold;"> <i class="material-icons">done</i> Als speichern von Drive </button>
+           <input type="text" id="title" placeholder="New Document 1" onchange="myFunction()">
+           <button class="btnchange" style="font-weight: bold;"> <i class="material-icons">done</i> All saved in Drive </button>
            <img width="20" src="https://lh3.googleusercontent.com/ogw/ADGmqu9jsK30OhjrHcqSyoF4KHuFGeIf41nvu50_ZNBSKQ=s32-c-mo" alt="avatar">
-           <input type="text" placeholder="Dokumentcode" class="fontinput" style="width: 75px;" title="Dokumentcode">
+           <input type="text" placeholder="Document code" class="fontinput" style="width: 75px;" title="Document code">
            </div>
            <div>
             <div class="dropdown">
               <button class="dropbtn"><i class="material-icons">menu</i></button>
               <div class="dropdown-content">
-                 <a href="javascript:void(0)" onclick="location.reload();"><i class="material-icons">add</i> Neu</a>
-                 <a href="#"><i class="material-icons">folder</i> Öffnen</a>
-                 <a onclick="window.print()" href="javascript:void(0);"><i class="material-icons">print</i> Druchken</a>
-                 <a href="javascript:void(0);" onclick="speichern()"><i class="material-icons">save</i> Speichern</a>
-                 <a href="#" class="cmt" style="cursor: not-allowed;" title="Bitte fass das nicht an! Diese Funktion ist derzeit nicht verfügbar"><i class="material-icons">chat</i> Kommentare (beta)</a>
+                 <a href="javascript:void(0)" onclick="location.reload();"><i class="material-icons">add</i> New</a>
+                 <a href="#"><i class="material-icons">folder</i> Open</a>
+                 <a onclick="window.print()" href="javascript:void(0);"><i class="material-icons">print</i> Print</a>
+                 <a href="javascript:void(0);" onclick="speichern()"><i class="material-icons">save</i> Save</a>
+                 <a href="#" class="cmt" style="cursor: not-allowed;" title="Please don't touch this! This function is currently not available"><i class="material-icons">chat</i> Comments (beta)</a>
               </div>
            </div>
-               <button class="btn" id="btnUndo" title="Rückgängig (Ctrl+Z)"><i class="material-icons">undo</i></button>
-               <button class="btn" id="btnRedo" title="Wiederholen (Ctrl+Y)"><i class="material-icons">redo</i></button>
-               <button class="btn" onclick="print();" title="Dokument drucken (Ctrl+P)"><i class="material-icons">print</i></button>
-               <button class="btn" id="btnDelete" title="Löschen (Del)"><i class="material-icons">delete</i></button>
-               <input type="color" id="colorInput" title="Farbwähler">
+               <button class="btn" id="btnUndo" title="Undo (Ctrl+Z)"><i class="material-icons">undo</i></button>
+               <button class="btn" id="btnRedo" title="Redo (Ctrl+Y)"><i class="material-icons">redo</i></button>
+               <button class="btn" onclick="print();" title="Print document (Ctrl+P)"><i class="material-icons">print</i></button>
+               <button class="btn" id="btnDelete" title="Delete (Del)"><i class="material-icons">delete</i></button>
+               <input type="color" id="colorInput" title="Color Picker">
                <button class="btn" id="colorBtn" onclick="color()"><i class="material-icons">format_paint</i></button>
                <select id="fontInput" class="fontinput" onchange="font();">
                   <option value="Calibri" style="font-family: Calibri;">Calibri</option>
@@ -75,16 +75,16 @@
                </select>
                <input type="text" id="fontsizeInput" class="fontinput" style="width: 33px;" maxlength="7">
                <button class="btn" id="sizeOK" onclick="size()"><i class="material-icons">done</i></button>
-               <button class="btn" id="btnBold" title="Fettdruck (Ctrl+B)"><i class="material-icons">format_bold</i></button> 
-               <button class="btn" id="btnItalic" title="Kursives Format (Ctrl+I)"><i class="material-icons">format_italic</i></button> 
-               <button class="btn" id="btnUnderline" title="Format unterstreichen (Ctrl+U)"><i class="material-icons">format_underlined</i></button> 
-               <button class="btn" id="btnStrike" title="Durchgestrichen"><i class="material-icons">strikethrough_s</i></button>
-               <button class="btn" id="btnSuperscript" title="Hochgestellt"><i class="material-icons">superscript</i></button>
-               <button class="btn" id="btnSubscript" title="Index"><i class="material-icons">subscript</i></button>
-               <button class="btn" id="btnRemoveFormat" title="Format löschen"><i class="material-icons">format_clear</i></button> 
-               <button class="btn" id="btnCenter" title="Zur Mitte ausrichten"><i class="material-icons">format_align_center</i></button> 
-               <button class="btn" id="btnRight" title="Nach Rechts ausrichten"><i class="material-icons">format_align_right</i></button> 
-               <button class="btn" id="btnLeft" title="Nach links ausrichten (Standard)"><i class="material-icons">format_align_left</i></button>
+               <button class="btn" id="btnBold" title="Bold (Ctrl+B)"><i class="material-icons">format_bold</i></button> 
+               <button class="btn" id="btnItalic" title="Italic (Ctrl+I)"><i class="material-icons">format_italic</i></button> 
+               <button class="btn" id="btnUnderline" title="Underline (Ctrl+U)"><i class="material-icons">format_underlined</i></button> 
+               <button class="btn" id="btnStrike" title="Strikethrough"><i class="material-icons">strikethrough_s</i></button>
+               <button class="btn" id="btnSuperscript" title="Superscript"><i class="material-icons">superscript</i></button>
+               <button class="btn" id="btnSubscript" title="Subscript"><i class="material-icons">subscript</i></button>
+               <button class="btn" id="btnRemoveFormat" title="Clear format"><i class="material-icons">format_clear</i></button> 
+               <button class="btn" id="btnCenter" title="Align to Center"><i class="material-icons">format_align_center</i></button> 
+               <button class="btn" id="btnRight" title="Align to Right"><i class="material-icons">format_align_right</i></button> 
+               <button class="btn" id="btnLeft" title="Align to Left"><i class="material-icons">format_align_left</i></button>
            </div>
         </div>
            <div class="contenteditor" id="editor" contenteditable="true" spellcheck="true" oninput="countWord()" translate="none">
@@ -92,14 +92,14 @@
            </div>
            <!--lame asshole menu TwT-->
            <ul id="menu">
-             <li class="menu-item" onclick="cut()"><i class="material-icons">content_cut</i> Schnitt</li>
-             <li class="menu-item" id="btnCopy"><i class="material-icons">content_copy</i> Kopieren</li>
-             <li class="menu-item" id="btnPaste"><i class="material-icons">content_paste</i> Einfügen</li>
+             <li class="menu-item" onclick="cut()"><i class="material-icons">content_cut</i> Cut</li>
+             <li class="menu-item" id="btnCopy"><i class="material-icons">content_copy</i> Copy</li>
+             <li class="menu-item" id="btnPaste"><i class="material-icons">content_paste</i> Paste</li>
              <hr style="color: #fff; width: 164px;">
-             <li class="menu-item" id="Bold"><i class="material-icons">format_bold</i> Fettdruck</li>
-             <li class="menu-item" id="Italic"><i class="material-icons">format_italic</i> Kursives</li>
-             <li class="menu-item" id="Underline"><i class="material-icons">format_underline</i> Unterstreichen</li>
-             <li class="menu-item" id="Strike"><i class="material-icons">strikethrough_s</i> Durchgestrichen</li>
+             <li class="menu-item" id="Bold"><i class="material-icons">format_bold</i> Bold</li>
+             <li class="menu-item" id="Italic"><i class="material-icons">format_italic</i> Italic</li>
+             <li class="menu-item" id="Underline"><i class="material-icons">format_underline</i> Underline</li>
+             <li class="menu-item" id="Strike"><i class="material-icons">strikethrough_s</i> Strikethrough</li>
            </ul>
         <script type="text/javascript" src="script.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
