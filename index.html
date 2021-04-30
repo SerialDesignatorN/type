@@ -4,467 +4,46 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title id="pageTitle">New Document 1 - Kasius Type</title>
-        <link rel="stylesheet" href="KasiusTypeDark.css" />
-        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Chewy&amp;family=Didact+Gothic&amp;family=Fredoka+One&amp;family=Grandstander:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Lato:ital,wght@0,400;0,900;1,400;1,700;1,900&amp;family=M+PLUS+Rounded+1c:wght@400;500;700;800;900&amp;family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,700;1,800;1,900&amp;family=Patrick+Hand&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&amp;family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Schoolbell&amp;display=swap" rel="stylesheet">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title id="pageTitle">Neues Dokument 1- Kasius Type</title>
+        <link rel="icon" href="https://github.com/zeankundev/kasius-type-git-revised/blob/main/icon.png?raw=true" type="image/x-icon"/>
+        <link rel="stylesheet" href="style.css"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Chewy&family=Didact+Gothic&family=Fredoka+One&family=Grandstander:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,400;0,900;1,400;1,700;1,900&family=M+PLUS+Rounded+1c:wght@400;500;700;800;900&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,700;1,800;1,900&family=Patrick+Hand&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Schoolbell&display=swap" rel="stylesheet">
  
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <style>
-body {
-  font-family: Segoe UI;
-  background-color: #232323;
-  user-select: none;
-}
-.contenteditor {
-  background-color: #FFFFFF;
-  font-family: Segoe UI;
-  font-size: 15px;
-  text-decoration-color: #000000;
-}
-h1 {
-    font-family: Segoe UI;
-    font-size: 48px;
-    font-style: bold;
-    color: #FFFFFF
-}
-p {
-  font-family: Segoe UI;
-  color: #000000;
-  font-size: 12px;
-}
-h2 {
-  font-family: Segoe UI;
-  color: #FFFFFF
-  font-size: 18px;
-}
-h3 {
-  font-family: Segoe UI;
-  color: #FFFFFF;
-  font-size: 18px;
-}
-#editor {
-    width: 794px;
-    font-size: 20px;
-    height: 1123px;
-    display: block;
-    border: 2px solid lightblue;
-    margin-top: 4px;
-    margin-left: 270px;
-    user-select: text;
-}
-.header {
-  background-color: #232323;
-  width: 100%;
-  height: 129px;
-  left: 0px;
-}
-.btn {
-  background-color: #232323; /* Blue background */
-  border: none; /* Remove borders */
-  color: #f5f5f5;
-  font-family: Segoe UI; /* White text */
-  padding: 12px 16px; /* Some padding */
-  font-size: 12px; /* Set a font size */
-  cursor: default; /* Mouse pointer on hover */
-}
-
-.btnchange {
-  background-color: #232323; /* Blue background */
-  border: none; /* Remove borders */
-  color: #f5f5f5;
-  font-family: Segoe UI; /* White text */
-  padding: 12px 16px; /* Some padding */
-  font-size: 20px; /* Set a font size */
-  cursor: default; /* Mouse pointer on hover */
-}
-
-/* The Font Input Picker */
-.fontinput {
-  font-size: 20px;
-  border-radius: 25px;
-  background-color: #232323;
-  color: #f5f5f5;
-  font-family: Segoe UI;
-}
-
-/* Darker background on mouse-over */
-.btn:hover {
-  background-color: #363636;
-  border-radius: 30px;
-}
-/* Dropdown Button */
-.dropbtn {
-  background-color: #232323;
-  color: white;
-  font-family: Segoe UI;
-  padding: 16px;
-  font-size: 10px;
-  border: none;
-  cursor: pointer;
-}
-
-/* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
-  background-color: #363636;
-  border-radius: 30px;
-}
-.tooltip .tooltiptext {
-  width: 120px;
-  top: 100%;
-  left: 50%;
-  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
-}
-.tooltip .tooltiptext {
-  opacity: 0;
-  transition: opacity 1s;
-}
-
-.tooltip:hover .tooltiptext {
-  opacity: 1;
-}
-.tooltip .tooltiptext::after {
-  content: " ";
-  position: absolute;
-  bottom: 100%;  /* At the top of the tooltip */
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: transparent transparent black transparent;
-}
-/* Dropdown Button */
-.dropbtn {
-  background-color: #232323;
-  color: #f5f5f5;
-  padding: 16px;
-  font-size: 12px;
-  border: none;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #363636;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: #f5f5f5;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #545454;}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #363636;}
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  font-family: Segoe UI;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button */
-.close {
-  color: #FFFFFF;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: gray;
-  text-decoration: none;
-  cursor: pointer;
-}
-/* Modal Header */
-.modal-header {
-  padding: 2px 16px;
-  background-color: #00a2e8;
-  color: white;
-}
-
-/* Modal Body */
-.modal-body {padding: 2px 16px;}
-/* Modal body white text */
-.modal-body p {color: #f2f2f2}
-
-/* Modal Footer */
-.modal-footer {
-  padding: 2px 16px;
-  background-color: #00a2e8;
-  color: white;
-}
-
-/* Modal Content */
-.modal-content {
-  position: relative;
-  background-color: #545454;
-  margin: auto;
-  padding: 0;
-  border: 1px solid #888;
-  width: 80%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-  animation-name: udimrev;
-  animation-duration: 0.4s
-}
-
-/* Add Animation */
-@keyframes udimrev {
-    0.0%{
-    }
-    15.0%{
-        transform-origin: top;
-        transform: translate(0px, 200px);
-    }
-}
-{box-sizing: border-box;}
-
-/* Button used to open the chat form - fixed at the bottom of the page */
-.open-button {
-  background-color: #555;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  opacity: 0.8;
-  position: fixed;
-  bottom: 23px;
-  right: 28px;
-  width: 280px;
-}
-
-/* The popup chat - hidden by default */
-.form-popup {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  right: 15px;
-  border: 3px solid #f1f1f1;
-  z-index: 9;
-}
-
-/* Add styles to the form container */
-.form-container {
-  max-width: 300px;
-  padding: 10px;
-  background-color: white;
-}
-
-/* Full-width textarea */
-.form-container textarea {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  border: none;
-  background: #f1f1f1;
-  resize: none;
-  min-height: 200px;
-}
-
-/* When the textarea gets focus, do something */
-.form-container textarea:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-/* Set a style for the submit/login button */
-.form-container .btn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  margin-bottom:10px;
-  opacity: 0.8;
-}
-
-/* Add a red background color to the cancel button */
-.form-container .cancel {
-  background-color: red;
-}
-
-/* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover {
-  opacity: 1;
-}
-/* The switch button */
-.switch {
-  background-color: #f2f2f2;
-  color: #0d0d0d;
-  font-size: 12px;
-  border-radius: 16px;
-}
-/* When it hovers, do the thing, badass */
-.switch:hover {
-  background-color: #d9d9d9;
-  color: #0d0d0d;
-  font-size: 16px;
-  border-radius: 18px;
-}
-/* Page content */
-.content {
-  padding: 0px;
-}
-/* The sticky class is added to the header with JS when it reaches its scroll position */
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%
-}
-
-/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
-  padding-top: 102px;
-}
-#menu {
-  display: block;
-  background-color: #232323;
-  padding: 10px 0px;
-  border-radius: 5px;
-  box-shadow: 2px 2px 30px lightgrey;
-  position: absolute;
-  transform-origin: center;
-  z-index: 2;
-  opacity: 0;
-  transform: scale(0);
-  transition: transform 0.2s, opacity 0.2s;
-}
-
-#menu.show {
-  opacity: 1;
-  transform: scale(1);
-  transform-origin: top left;
-}
-
-.menu-item {
-  display: block;
-  padding: 10px 30px;
-  transition: 0.1s;
-  font-size: 20px;
-  color: #f5f5f5;
-}
-
-.menu-item:hover {
-  background-color: #363636;
-  cursor: pointer;
-}
-
-#out-click {
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  display: none;
-}
-}
-.altAccess {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.access {
-  display: none;
-  position: absolute;
-  background-color: #232323;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.access a {
-  color: #f2f2f2;
-  padding: 12px 16px;
-  text-decoration: none;
-  font-size: 20px;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.access a:hover {background-color: #363636}
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {
-  display:block;
-}
-
-.accessbtn {
-  background-color: #232323; /* Blue background */
-  border: none; /* Remove borders */
-  color: #f5f5f5;
-  font-family: Segoe UI; /* White text */
-  padding: 12px 16px; /* Some padding */
-  font-size: 20px; /* Set a font size */
-  cursor: default; /* Mouse pointer on hover */
-}
-
-.altAccess:hover .access {display: block;}
-    </style>
+<!--[if lt IE 9]-->
+<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<!--[endif]-->
     </head>
     <body>
         <div class="header" id="ToolBar">
-           <input type="text" STYLE="color: #fefefe; font-family: Segoe UI; font-weight: bold; font-size: 48px; background-color: #232323" id="title" placeholder="New Document 1">
-           <button class="btn" id="btnChange" onclick="myFunction()">Change</button> 
+           <img width="40" src="https://github.com/zeankundev/kasius-type-git-revised/blob/main/icon.png?raw=true" style="margin-bottom: -12px;">
+           <input type="text" id="title" placeholder="Neues Dokument 1" onchange="myFunction()">
+           <button class="btnchange" style="font-weight: bold;"> <i class="material-icons">done</i> Als speichern von Drive </button>
+           <img width="20" src="https://lh3.googleusercontent.com/ogw/ADGmqu9jsK30OhjrHcqSyoF4KHuFGeIf41nvu50_ZNBSKQ=s32-c-mo" alt="avatar">
+           <input type="text" placeholder="Dokumentcode" class="fontinput" style="width: 75px;" title="Dokumentcode">
+           </div>
            <div>
             <div class="dropdown">
-              <button class="dropbtn"><i class="fas fa-bars"></i></button>
+              <button class="dropbtn"><i class="material-icons">menu</i></button>
               <div class="dropdown-content">
-                 <a href="#"><i class="fas fa-plus"></i> New</a>
-                 <a href="#"><i class="fas fa-folder-open"></i> Open</a>
-                 <a onclick="window.print()" href="javascript:void(0);"><i class="fas fa-print"></i> Print</a>
-                 <a href="#"><i class="far fa-save"></i> Save</a>
-                 <a href="#"><i class="fas fa-comment-dots"></i> Comments (beta)</a>
-                 <a href="C:\Users\zeanf\Documents\Business360Suite\index.html"><i class="fas fa-times"></i> Quit</a>
+                 <a href="javascript:void(0)" onclick="location.reload();"><i class="material-icons">add</i> Neu</a>
+                 <a href="#"><i class="material-icons">folder</i> Öffnen</a>
+                 <a onclick="window.print()" href="javascript:void(0);"><i class="material-icons">print</i> Druchken</a>
+                 <a href="javascript:void(0);" onclick="speichern()"><i class="material-icons">save</i> Speichern</a>
+                 <a href="#" class="cmt" style="cursor: not-allowed;" title="Bitte fass das nicht an! Diese Funktion ist derzeit nicht verfügbar"><i class="material-icons">chat</i> Kommentare (beta)</a>
               </div>
            </div>
-               <button class="btn" id="btnUndo" title="Undo (Ctrl+Z)"><i class="fas fa-undo"></i></button>
-               <button class="btn" id="btnRedo" title="Redo (Ctrl+Y)"><i class="fas fa-redo"></i></button>
-               <button class="btn" onclick="window.print();" title="Print Document (Ctrl+P)"><i class="fas fa-print"></i></button>
-               <button class="btn" id="btnDelete" title="Delete (Del)"><i class="far fa-trash-alt"></i></button>
-               <input type="color" id="colorInput">
-               <button class="btn" id="colorBtn" onclick="color()"><i class="fas fa-paint-roller"></i></button>
+               <button class="btn" id="btnUndo" title="Rückgängig (Ctrl+Z)"><i class="material-icons">undo</i></button>
+               <button class="btn" id="btnRedo" title="Wiederholen (Ctrl+Y)"><i class="material-icons">redo</i></button>
+               <button class="btn" onclick="print();" title="Dokument drucken (Ctrl+P)"><i class="material-icons">print</i></button>
+               <button class="btn" id="btnDelete" title="Löschen (Del)"><i class="material-icons">delete</i></button>
+               <input type="color" id="colorInput" title="Farbwähler">
+               <button class="btn" id="colorBtn" onclick="color()"><i class="material-icons">format_paint</i></button>
                <select id="fontInput" class="fontinput" onchange="font();">
                   <option value="Calibri" style="font-family: Calibri;">Calibri</option>
                   <option value="Arial" style="font-family: Arial;">Arial</option>
@@ -494,277 +73,35 @@ h3 {
                   <option value="Arial Black" style="font-family: Arial Black;">Arial Black</option>
                   <option value="Tahoma" style="font-family: Tahoma;">Tahoma</option>
                </select>
-               <input type="text" id="fontsizeInput" class="fontinput" style="width: 33px;" maxlength="3">
-               <button class="btn" id="sizeOK" onclick="size()"><i class="fas fa-check"></i></button>
-               <button class="btn" id="btnBold" title="Bold Format (Ctrl+B)"><i class="fas fa-bold"></i></button> 
-               <button class="btn" id="btnItalic" title="Italic Format (Ctrl+I)"><i class="fas fa-italic"></i></button> 
-               <button class="btn" id="btnUnderline" title="Underline Format (Ctrl+U)"><i class="fas fa-underline"></i></button> 
-               <button class="btn" id="btnStrike" title="Strikethrough"><i class="fas fa-strikethrough"></i></button>
-               <button class="btn" id="btnSuperscript" title="Superscript"><i class="fas fa-superscript"></i></button>
-               <button class="btn" id="btnSubscript" title="Subscript"><i class="fas fa-subscript"></i></button>
-               <button class="btn" id="btnRemoveFormat" title="Clear Format"><i class="fas fa-remove-format"></i></button> 
-               <button class="btn" id="btnCenter" title="Align to Center"><i class="fas fa-align-center"></i></button> 
-               <button class="btn" id="btnRight" title="Align to Right"><i class="fas fa-align-right"></i></button> 
-               <button class="btn" id="btnLeft" title="Align to left (default)"><i class="fas fa-align-left"></i></button>
-               <!-- Trigger/Open The Modal -->
-               <button class="btn" id="myBtn"><i class="fas fa-info-circle"></i></button>
-
-               <!-- The Modal -->
-               <div id="myModal" class="modal">
-
-                  <!-- Modal content -->
-                   <div class="modal-content">
-                      <div class="modal-header">
-                        <span class="close">&times;</span>
-                        <h2>About Kasius Type</h2>
-                      </div>
-                      <div class="modal-body">
-                        <p>This is a GitHub version of Kasius Type.</p>
-                        <p>To modify, please click Code and then Download as ZIP</p>
-                      </div>
-                      <div class="modal-footer">
-                        <h3>Kasius Type: Open Source edition. Free to use.</h3>
-                      </div>
-                    </div>
-                   </div>
-               </div>
+               <input type="text" id="fontsizeInput" class="fontinput" style="width: 33px;" maxlength="7">
+               <button class="btn" id="sizeOK" onclick="size()"><i class="material-icons">done</i></button>
+               <button class="btn" id="btnBold" title="Fettdruck (Ctrl+B)"><i class="material-icons">format_bold</i></button> 
+               <button class="btn" id="btnItalic" title="Kursives Format (Ctrl+I)"><i class="material-icons">format_italic</i></button> 
+               <button class="btn" id="btnUnderline" title="Format unterstreichen (Ctrl+U)"><i class="material-icons">format_underlined</i></button> 
+               <button class="btn" id="btnStrike" title="Durchgestrichen"><i class="material-icons">strikethrough_s</i></button>
+               <button class="btn" id="btnSuperscript" title="Hochgestellt"><i class="material-icons">superscript</i></button>
+               <button class="btn" id="btnSubscript" title="Index"><i class="material-icons">subscript</i></button>
+               <button class="btn" id="btnRemoveFormat" title="Format löschen"><i class="material-icons">format_clear</i></button> 
+               <button class="btn" id="btnCenter" title="Zur Mitte ausrichten"><i class="material-icons">format_align_center</i></button> 
+               <button class="btn" id="btnRight" title="Nach Rechts ausrichten"><i class="material-icons">format_align_right</i></button> 
+               <button class="btn" id="btnLeft" title="Nach links ausrichten (Standard)"><i class="material-icons">format_align_left</i></button>
            </div>
         </div>
-           <div class="contenteditor" id="editor" contenteditable="true" spellcheck="true" >
-           <ul id="menu" class="show" style="top: 282px; left: 676px;">
-             <li class="menu-item" onclick="cut()"><i class="fas fa-cut"></i> Cut</li>
-             <li class="menu-item" id="btnCopy"><i class="fas fa-copy"></i> Copy</li>
-             <li class="menu-item" id="btnPaste"><i class="fas fa-clipboard"></i> Paste</li>
-             <hr style="color: #fff; width: 164px;">
-             <li class="menu-item" id="Bold"><i class="fas fa-bold"></i> Bold</li>
-             <li class="menu-item" id="Italic"><i class="fas fa-italic"></i> Italic</li>
-             <li class="menu-item" id="Underline"><i class="fas fa-underline"></i> Underline</li>
-             <li class="menu-item" id="Strike"><i class="fas fa-strikethrough"></i> Strikethrough</li>
-           </ul>
+           <div class="contenteditor" id="editor" contenteditable="true" spellcheck="true" oninput="countWord()" translate="none">
+            <div id="out-click"></div>
            </div>
-        <script>
-var btnBold = document.getElementById("btnBold");
-var btnItalic = document.getElementById("btnItalic");
-var btnUnderline = document.getElementById("btnUnderline");
-var btnStrike = document.getElementById("btnStrike");
-var btnSubscript = document.getElementById("btnSubscript");
-var btnRemoveFormat = document.getElementById("btnRemoveFormat");
-var btnSuperscript = document.getElementById("btnSuperscript");
-var btnSubscript = document.getElementById("btnSubscript")
-var btnCenter = document.getElementById("btnCenter");
-var btnRight = document.getElementById("btnRight");
-var btnLeft = document.getElementById("btnLeft");
-var btnUndo = document.getElementById("btnUndo");
-var btnRedo = document.getElementById("btnRedo")
-var btnSave = document.getElementById("btnSave")
-var btnDelete = document.getElementById("btnDelete")
-var btnCopy = document.getElementById("btnCopy")
-var btnPaste = document.getElementById("btnPaste")
-var Bold = document.getElementById("Bold");
-var Italic = document.getElementById("Italic");
-var Underline = document.getElementById("Underline");
-var Strike = document.getElementById("Strike");
-
-function cut(){
-    document.execCommand("cut");
-    event.preventDefault()
-}
-btnStrike.addEventListener("mousedown", function(event){
-     
-    document.execCommand("strikethrough");
-    console.log("Strikethrough successful from right click");
-    event.preventDefault();
-     
-});
-Bold.addEventListener("mousedown", function(event){
-     
-    document.execCommand("bold");
-    console.log("Bold formatted successful from right click");
-    event.preventDefault();
- 
-});
-Italic.addEventListener("mousedown", function(event){
-     
-    document.execCommand("italic");
-    console.log("Italic formatted successful from right click");
-    event.preventDefault();
-     
-});
-Underline.addEventListener("mousedown", function(event){
-     
-    document.execCommand("underline");
-    console.log("Underline formatted successful from right click");
-    event.preventDefault();
-     
-});
-btnCopy.addEventListener("mousedown", function(event){
-    document.execCommand("copy");
-    event.preventDefault()
-})
-btnPaste.addEventListener("mousedown", function(event){
-    document.execCommand("paste");
-    event.preventDefault()
-})
-btnDelete.addEventListener("mousedown", function(event){
-    document.execCommand("delete");
-    console.log("Delete successful");
-    event.preventDefault();
-});
-btnRedo.addEventListener("mousedown", function(event){
-    document.execCommand("redo");
-    console.log("Redo successful");
-    event.preventDefault();
-});    
-btnUndo.addEventListener("mousedown", function(event){
-    document.execCommand("undo");
-    console.log("Undo successful");
-    event.preventDefault();
-});
-btnLeft.addEventListener("mousedown", function(event){
-    document.execCommand("justifyLeft");
-    console.log("Justify to the left successful");
-    event.preventDefault();
-});
-btnRight.addEventListener("mousedown", function(event){
-    document.execCommand("justifyRight");
-    console.log("Justify to the right successful");
-    event.preventDefault();
-});
-btnCenter.addEventListener('mousedown', function(event){
-    document.execCommand("justifyCenter");
-    console.log("Justify to the center successful");
-    event.preventDefault();
-});
-btnSubscript.addEventListener("mousedown", function(event){
-    document.execCommand("subscript");
-    console.log("Subscript successful");
-    event.preventDefault();
-});
-btnSuperscript.addEventListener("mousedown", function(event){    
-    document.execCommand("superscript");
-        console.log("Superscript successful");
-    event.preventDefault();
-     
-});
-btnRemoveFormat.addEventListener("mousedown", function(event){
-     
-    document.execCommand("removeFormat");
-    console.log("Format remove successful");
-    event.preventDefault();
-          
-});
-btnStrike.addEventListener("mousedown", function(event){
-     
-    document.execCommand("strikethrough");
-    console.log("Strikethrough successful");
-    event.preventDefault();
-     
-});
-btnBold.addEventListener("mousedown", function(event){
-     
-    document.execCommand("bold");
-    console.log("Bold formatted successful");
-    event.preventDefault();
- 
-});
-btnItalic.addEventListener("mousedown", function(event){
-     
-    document.execCommand("italic");
-    console.log("Italic formatted successful");
-    event.preventDefault();
-     
-});
-btnUnderline.addEventListener("mousedown", function(event){
-     
-    document.execCommand("underline");
-    console.log("Underline formatted successful");
-    event.preventDefault();
-     
-});
-function openForm() {
-  document.getElementById("myForm").style.display = "block";
-}
-
-function closeForm() {
-  document.getElementById("myForm").style.display = "none";
-}
-
-function myFunction() {
-    var str1 = document.getElementById("title").value;
-    var str2 = " - Kasius Type";
-    var res = str1.concat(str2);
-    document.getElementById("pageTitle").innerHTML = res;
-    
-}
-
-function color() {
-    console.log("Changed color")
-    let color = document.getElementById("colorInput").value
-    document.getElementById("editor").style.color = document.getElementById("colorInput").value;
-
-}
-
-function font() {
-    console.log("Font changed")
-    let font = document.getElementById("fontInput").value
-    document.getElementById("editor").style.fontFamily = document.getElementById("fontInput").value
-    document.getElementById("fontInput").style.fontFamily = document.getElementById("fontInput").value
-}
-
-function size() {
-    console.log("Font size changed");
-    let fontSize = document.getElementById("fontsizeInput");
-    document.getElementById("editor").style.fontSize = document.getElementById("fontsizeInput").value+"px"
-};
-// Warning before leaving the page (back button, or outgoinglink)
-window.onbeforeunload = function() {
-   return "Do you really want to leave our brilliant application?";
-   //if we return nothing here (just calling return;) then there will be no pop-up question at all
-   //return;
-};
-const editor = document.getElementById('editor')
-  const menu = document.getElementById('menu')
-  const outClick = document.getElementById('out-click')
-
-  editor.addEventListener('contextmenu', e => {
-    e.preventDefault()
-
-    menu.style.top = `${e.clientY}px`
-    menu.style.left = `${e.clientX}px`
-    menu.classList.add('show')
-
-    outClick.style.display = "block"
-  })
-
-  outClick.addEventListener('click', () => {
-    menu.classList.remove('show')
-    outClick.style.display = "none"
-  })
-  function speichern() {
-    var str1 = document.getElementById("title").value;
-    var str2 = " - Kasius Type";
-    var res = str1.concat(str2);
-    doc.save(document.getElementById("pageTitle").innerHTML = res + ".pdf");
-  }
-  /* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-function showAccess() {
-  document.getElementById("allAccess").classList.toggle("show");
-}
-
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.accessbtn')) {
-    var dropdowns = document.getElementsByClassName("access");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-        </script>
+           <!--lame asshole menu TwT-->
+           <ul id="menu">
+             <li class="menu-item" onclick="cut()"><i class="material-icons">content_cut</i> Schnitt</li>
+             <li class="menu-item" id="btnCopy"><i class="material-icons">content_copy</i> Kopieren</li>
+             <li class="menu-item" id="btnPaste"><i class="material-icons">content_paste</i> Einfügen</li>
+             <hr style="color: #fff; width: 164px;">
+             <li class="menu-item" id="Bold"><i class="material-icons">format_bold</i> Fettdruck</li>
+             <li class="menu-item" id="Italic"><i class="material-icons">format_italic</i> Kursives</li>
+             <li class="menu-item" id="Underline"><i class="material-icons">format_underline</i> Unterstreichen</li>
+             <li class="menu-item" id="Strike"><i class="material-icons">strikethrough_s</i> Durchgestrichen</li>
+           </ul>
+        <script type="text/javascript" src="script.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </body>
 </html>
