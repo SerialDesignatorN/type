@@ -7,6 +7,15 @@ This software is protected with
 GNU General Public Lisence
 ***********************************/
 
+/* font declaration */
+/* netflix sans */
+@font-face {
+  font-family: Netflix Sans;
+  src: url('/font/netflixsans-black-webfont.woff2') format('woff2'),
+       url('/font/netflixsans-bold-webfont.woff2') format('woff2'),
+       url('/font/netflixsans-light-webfont.woff2') format('woff2');
+}
+
 body {
   font-family: Segoe UI;
   background-color: #232323;
