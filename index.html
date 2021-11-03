@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <title id="pageTitle">New Document 1 - Kasius Type</title>
-        <link rel="icon" href="https://github.com/zeankundev/kasius-type-git-revised/blob/main/icon.png?raw=true" type="image/x-icon"/>
+        <link rel="icon" href="logo.png" type="image/x-icon"/>
         <link rel="stylesheet" href="style.css"/>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
@@ -21,23 +21,20 @@
     </head>
     <body>
         <div class="header" id="ToolBar">
-           <img width="40" src="https://github.com/zeankundev/kasius-type-git-revised/blob/main/icon.png?raw=true" style="margin-bottom: -12px;">
+           <img width="25" src="logo.png" style="margin-bottom: -4px; margin-right: 9px;">
            <input type="text" id="title" placeholder="New Document 1" onchange="myFunction()">
-           <button class="btnchange" style="font-weight: bold;"> <i class="material-icons">done</i> All saved in Drive </button>
-           <img width="20" src="https://lh3.googleusercontent.com/ogw/ADGmqu9jsK30OhjrHcqSyoF4KHuFGeIf41nvu50_ZNBSKQ=s32-c-mo" alt="avatar">
            <input type="text" placeholder="Document code" class="fontinput" style="width: 75px;" title="Document code">
-           </div>
-           <div>
+           <br>
             <div class="dropdown">
               <button class="dropbtn"><i class="material-icons">menu</i></button>
               <div class="dropdown-content">
                  <a href="javascript:void(0)" onclick="location.reload();"><i class="material-icons">add</i> New</a>
                  <a href="#"><i class="material-icons">folder</i> Open</a>
                  <a onclick="window.print()" href="javascript:void(0);"><i class="material-icons">print</i> Print</a>
-                 <a href="javascript:void(0);" onclick="speichern()"><i class="material-icons">save</i> Save</a>
+                 <a href="javascript:void(0);" onclick="saveDoc()"><i class="material-icons">save</i> Save</a>
                  <a href="#" class="cmt" style="cursor: not-allowed;" title="Please don't touch this! This function is currently not available"><i class="material-icons">chat</i> Comments (beta)</a>
               </div>
-           </div>
+            </div>
                <button class="btn" id="btnUndo" title="Undo (Ctrl+Z)"><i class="material-icons">undo</i></button>
                <button class="btn" id="btnRedo" title="Redo (Ctrl+Y)"><i class="material-icons">redo</i></button>
                <button class="btn" onclick="print();" title="Print document (Ctrl+P)"><i class="material-icons">print</i></button>
@@ -47,7 +44,7 @@
                <select id="fontInput" class="fontinput" onchange="font();">
                   <option value="Calibri" style="font-family: Calibri;">Calibri</option>
                   <option value="Arial" style="font-family: Arial;">Arial</option>
-                   <option value="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">System Font</option>
+                  <option value="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">System Font</option>
                   <option value="Helvetica" style="font-family: Helvetica;">Helvetica</option>
                   <option value="Didact Gothic" style="font-family: Didact Gothic;">Didact Gothic</option>
                   <option value="Times New Roman" style="font-family: Times New Roman;">Times New Roman</option>
@@ -75,7 +72,7 @@
                   <option value="Arial Black" style="font-family: Arial Black;">Arial Black</option>
                   <option value="Tahoma" style="font-family: Tahoma;">Tahoma</option>
                </select>
-               <input type="text" id="fontsizeInput" class="fontinput" style="width: 33px;" maxlength="7">
+               <input type="number" id="fontsizeInput" class="fontinput" value="20" style="width: 40px;" maxlength="7">
                <button class="btn" id="sizeOK" onclick="size()"><i class="material-icons">done</i></button>
                <button class="btn" id="btnBold" title="Bold (Ctrl+B)"><i class="material-icons">format_bold</i></button> 
                <button class="btn" id="btnItalic" title="Italic (Ctrl+I)"><i class="material-icons">format_italic</i></button> 
@@ -83,14 +80,29 @@
                <button class="btn" id="btnStrike" title="Strikethrough"><i class="material-icons">strikethrough_s</i></button>
                <button class="btn" id="btnSuperscript" title="Superscript"><i class="material-icons">superscript</i></button>
                <button class="btn" id="btnSubscript" title="Subscript"><i class="material-icons">subscript</i></button>
+               <button class="btn" id="btnSpacing" title="Adjust spacing"><i class="material-icons">vertical_align_center</i></button>
+               <button class="btn" id="btnAddPage" title="Add new page"><i class="material-icons">post_add</i></button>
                <button class="btn" id="btnRemoveFormat" title="Clear format"><i class="material-icons">format_clear</i></button> 
                <button class="btn" id="btnCenter" title="Align to Center"><i class="material-icons">format_align_center</i></button> 
                <button class="btn" id="btnRight" title="Align to Right"><i class="material-icons">format_align_right</i></button> 
                <button class="btn" id="btnLeft" title="Align to Left"><i class="material-icons">format_align_left</i></button>
-           </div>
         </div>
-           <div class="contenteditor" id="editor" contenteditable="true" spellcheck="true" oninput="countWord()" translate="none">
+           <div id="page" style="margin-top: 8.5%;">
+            <div class="contenteditor" id="editor" style="align-self:center;" contenteditable="true" spellcheck="true" translate="none">
+            </div>
             <div id="out-click"></div>
+           </div>
+           <div id="adjust" class="modal">
+              <div class="modal-content">
+                 <span class="close">&times;</span>
+                 <h2>Adjust Spacing</h2>
+                 <p>Adjust spacing in documents to make it tidy.</p>
+                 <hr>
+                 <p id="spacing-left">Spacing left: 1px</p>
+                 <input type="range" max="650" value="1" step="1" id="space-left-range">
+                 <p id="spacing-right">Spacing right: 1px</p>
+                 <input type="range" max="650" value="1" step="1" id="space-right-range">
+              </div>
            </div>
            <!--lame asshole menu TwT-->
            <ul id="menu">
