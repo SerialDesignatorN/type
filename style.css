@@ -17,32 +17,32 @@ GNU General Public Lisence
 }
 
 body {
-  font-family: Segoe UI;
+  font-family: system-ui;
   background-color: #232323;
   user-select: none;
 }
 .contenteditor {
   background-color: #FFFFFF;
-  font-family: Segoe UI;
+  font-family: system-ui;
   font-size: 15px;
   text-decoration-color: #000000;
 }
 h1 {
-    font-family: Segoe UI;
+    font-family: system-ui;
     font-size: 48px;
     font-style: bold;
     color: #FFFFFF
 }
 p {
-  font-family: Segoe UI;
+  font-family: system-ui;
 }
 h2 {
-  font-family: Segoe UI;
+  font-family: system-ui;
   color: #FFFFFF
   font-size: 18px;
 }
 h3 {
-  font-family: Segoe UI;
+  font-family: system-ui;
   color: #FFFFFF;
   font-size: 18px;
 }
@@ -111,7 +111,7 @@ h3 {
   background-color: #232323; /* Blue background */
   border: none; /* Remove borders */
   color: #f5f5f5;
-  font-family: Segoe UI; /* White text */
+  font-family: system-ui; /* White text */
   padding: 10px; /* Some padding */
   font-size: 12px; /* Set a font size */
   cursor: default; /* Mouse pointer on hover */
@@ -121,7 +121,7 @@ h3 {
   background-color: #232323; /* Blue background */
   border: none; /* Remove borders */
   color: #f5f5f5;
-  font-family: Segoe UI; /* White text */
+  font-family: system-ui; /* White text */
   padding: 12px 16px; /* Some padding */
   font-size: 20px; /* Set a font size */
   cursor: default; /* Mouse pointer on hover */
@@ -133,7 +133,7 @@ h3 {
   border-radius: 25px;
   background-color: #232323;
   color: #f5f5f5;
-  font-family: Segoe UI;
+  font-family: system-ui;
   outline: none;
   border-style: solid;
 }
@@ -150,7 +150,7 @@ h3 {
 
 #title {
   color: #fefefe; 
-  font-family: Segoe UI; 
+  font-family: system-ui; 
   font-size: 24px; 
   background-color: #232323; 
   width: 645px; 
@@ -163,7 +163,7 @@ h3 {
 
 #title:hover {
   color: #fefefe; 
-  font-family: Segoe UI; 
+  font-family: system-ui; 
   font-size: 24px; 
   background-color: #232323; 
   width: 645px; 
@@ -185,7 +185,7 @@ h3 {
 .dropbtn {
   background-color: #232323;
   color: white;
-  font-family: Segoe UI;
+  font-family: system-ui;
   padding: 16px;
   font-size: 10px;
   border: none;
@@ -300,7 +300,7 @@ input[type="color" i]:hover {
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
-  font-family: Segoe UI;
+  font-family: system-ui;
   color: #FFFFFF;
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
@@ -564,7 +564,7 @@ input[type="color" i]:hover {
   background-color: #232323; /* Blue background */
   border: none; /* Remove borders */
   color: #f5f5f5;
-  font-family: Segoe UI; /* White text */
+  font-family: system-ui; /* White text */
   padding: 12px 16px; /* Some padding */
   font-size: 20px; /* Set a font size */
   cursor: default; /* Mouse pointer on hover */
