@@ -182,7 +182,13 @@ spaceRightScrub.oninput = function() {
 function myFunction() {
     str1 = document.getElementById("title").value;
     var str2 = " - Kasius Type";
-    var res = str1.concat(str2);
+    if (str1 !='') {
+        var res = str1.concat(str2);
+    }
+    else {
+        str1 = 'Untitled';
+        var res = str1.concat(str2);
+    }
     document.getElementById("pageTitle").innerHTML = res;
     
 }
@@ -220,8 +226,8 @@ function color() {
 
 function font() {
     console.log("Font changed")
-    let font = document.getElementById("fontInput").value
-    document.getElementById("editor").style.fontFamily = document.getElementById("fontInput").value
+    let font = document.getElementById("fontInput").value;
+    document.execCommand('fontName', false, font);
     document.getElementById("fontInput").style.fontFamily = document.getElementById("fontInput").value
 }
 
