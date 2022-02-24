@@ -11,9 +11,12 @@ GNU General Public Lisence
 /* netflix sans */
 @font-face {
   font-family: Netflix Sans;
-  src: url('/font/netflixsans-black-webfont.woff2') format('woff2'),
-       url('/font/netflixsans-bold-webfont.woff2') format('woff2'),
-       url('/font/netflixsans-light-webfont.woff2') format('woff2');
+  src: url('./font/netflixsans-bold-webfont.woff2') format('woff2'),
+       url('./font/netflixsans-light-webfont.woff2') format('woff2');
+}
+@font-face {
+  font-family: HYWenHei;
+  src: url('./font/ja-jp.woff2') format('woff2');
 }
 
 body {
@@ -111,9 +114,10 @@ h3 {
   background-color: #232323; /* Blue background */
   border: none; /* Remove borders */
   color: #f5f5f5;
+  margin-left: 10px;
   font-family: system-ui; /* White text */
   padding: 10px; /* Some padding */
-  font-size: 12px; /* Set a font size */
+  font-size: 18px; /* Set a font size */
   cursor: default; /* Mouse pointer on hover */
 }
 
@@ -178,7 +182,7 @@ h3 {
 .btn:hover {
   background-color: #363636;
   border-radius: 30px;
-  font-size: 15px;
+  font-size: 18px;
   transition: all 0.2s ease;
 }
 /* Dropdown Button */
@@ -187,7 +191,7 @@ h3 {
   color: white;
   font-family: system-ui;
   padding: 16px;
-  font-size: 10px;
+  font-size: 18px;
   border: none;
   cursor: pointer;
 }
@@ -231,7 +235,7 @@ h3 {
   background-color: #232323;
   color: #f5f5f5;
   padding: 16px;
-  font-size: 12px;
+  font-size: 18px;
   border: none;
 }
 
